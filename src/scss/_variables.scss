@@ -1,0 +1,32 @@
+$theme: (
+  font-primary: ('Arial', sans-serif),
+
+  font-weight-light:  400,
+  font-weight-normal: 500,
+  font-weight-bold:   600,
+
+  text-primary:     rgb(255, 255, 255),
+  text-secondary:   rgb(75, 71, 70),
+  text-alternative: rgb(255, 255, 255),
+
+  color-primary:   rgb(189, 146, 103),
+  color-secondary: rgb(0, 0, 0),
+
+  button-positive: rgb(104, 100, 97),
+  button-negative: rgb(104, 100, 97),
+  button-neutral:  rgb(104, 100, 97),
+
+  toast-success: rgb(11, 204, 116),
+  toast-error:   rgb(201, 25, 18),
+  toast-info:    rgb(69, 132, 217),
+
+  panel-primary:   rgb(255, 255, 255),
+  panel-secondary: rgb(255, 255, 255),
+
+  line-primary:     rgb(104, 100, 97),
+  line-secondary:   rgb(104, 100, 97),
+  line-alternative: rgb(104, 100, 97),
+
+  background-primary:   rgb(18, 13, 10),
+  background-secondary: rgb(18, 13, 10)
+);
