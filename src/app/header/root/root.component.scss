@@ -1,0 +1,14 @@
+@import "../../../scss/variables";
+
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $header-height;
+  border-bottom: 0.1rem solid map-get($theme, line-secondary);
+  z-index: 2;
+}
