@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { timer } from 'rxjs';
 
 @Component({
   selector: 'miramen-page',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RootComponent implements OnInit {
 
+  activeIndex = 0;
+
   constructor() { }
 
   ngOnInit() {
+    timer(1000).subscribe(() => this.activeIndex = 1);
   }
 
 }
