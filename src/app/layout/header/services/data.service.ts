@@ -26,6 +26,8 @@ export const NAVIGATION: NavLink[] = [
 export class DataService extends BaseService {
 
   public getNavigation(): Observable<NavLink[]> {
+    const endpoint = this.buildUrl([]);
+
     return of(NAVIGATION);
   }
 
