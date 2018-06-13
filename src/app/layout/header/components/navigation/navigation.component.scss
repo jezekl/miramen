@@ -1,0 +1,33 @@
+@import "../../../../../scss/variables";
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list__line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  margin: auto;
+  height: 0.1rem;
+  width: 0;
+  background-color: map-get($theme, color-primary);
+  transition: width 200ms;
+}
+
+.nav-list__item {
+  margin: 0 1.5rem;
+}
+
+.nav-list__button {
+  color: map-get($theme, text-primary);
+  position: relative;
+
+  &:hover, &.nav-list__button--active {
+    .nav-list__line {
+      width: 100%;
+    }
+  }
+}

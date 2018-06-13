@@ -12,7 +12,7 @@ import {
 } from '@angular/core';
 
 import { SlideComponent } from '../slide/slide.component';
-import { WINDOW } from '../../../app.module';
+import { WINDOW } from '../../../../app.module';
 import { fromEvent, Subject } from 'rxjs';
 import { startWith, takeUntil, throttleTime } from 'rxjs/operators';
 

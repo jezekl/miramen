@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { RootComponent } from './components/_root/root.component';
 import { PageRoutingModule } from './page-routing.module';
-import { SliderModule } from '../slider/slider.module';
-import { HeaderModule } from '../header/header.module';
+import { SliderModule } from '../../layout/slider/slider.module';
+import { HeaderModule } from '../../layout/header/header.module';
 
 @NgModule({
   imports: [

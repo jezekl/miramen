@@ -8,8 +8,8 @@ export const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   }, {
-    path: ':route',
-    loadChildren: './_page/page.module#PageModule'
+    path: ':verticalRoute',
+    loadChildren: './pages/_page/page.module#PageModule'
   }
 ];
 

@@ -1,0 +1,8 @@
+<ul class="nav-list">
+  <li class="nav-list__item" *ngFor="let link of navigation; let i = index">
+    <a class="nav-list__button" [routerLink]="link.url" routerLinkActive="nav-list__button--active" mcrai-button>
+      {{ link.name }}
+      <div class="nav-list__line"></div>
+    </a>
+  </li>
+</ul>
