@@ -1,0 +1,22 @@
+@import "../../../../../scss/variables";
+
+:host /deep/ {
+  .page {
+    height: 100%;
+    padding: 6% 28% 20% 8%;
+  }
+
+  .page__headline {
+    font-size: 10rem;
+    color: map-get($theme, color-primary);
+    font-weight: map-get($theme, font-weight-normal);
+    text-transform: uppercase;
+    letter-spacing: 2.5rem;
+    font-family: map-get($theme, font-primary);
+  }
+
+
+  .page__content {
+    padding: 3% 0 0 10%;
+  }
+}

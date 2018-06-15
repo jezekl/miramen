@@ -1,20 +1,21 @@
 $header-height: 11rem;
 
 $theme: (
-  font-primary: ('Domine', sans-serif),
+  font-primary:   ('Domine', sans-serif),
+  font-secondary: ('Rubik', sans-serif),
 
   font-weight-light:  300,
   font-weight-normal: 500,
   font-weight-bold:   700,
 
-  text-primary:     rgb(255, 255, 255),
-  text-secondary:   rgb(75, 71, 70),
+  text-primary:     rgb(110, 110, 110),
+  text-secondary:   rgb(255, 255, 255),
   text-alternative: rgb(255, 255, 255),
 
-  color-primary:   rgb(189, 146, 103),
+  color-primary:   rgb(198, 156, 109),
   color-secondary: rgb(0, 0, 0),
 
-  button-positive: rgb(189, 146, 103),
+  button-positive: rgb(198, 156, 109),
   button-negative: rgb(104, 100, 97),
   button-neutral:  rgb(104, 100, 97),
 
@@ -29,6 +30,6 @@ $theme: (
   line-secondary:   rgba(255, 255, 255, .15),
   line-alternative: rgb(255, 255, 255),
 
-  background-primary:   rgb(18, 13, 10),
-  background-secondary: rgb(18, 13, 10)
+  background-primary:   rgb(16, 8, 5),
+  background-secondary: rgb(16, 8, 5)
 );

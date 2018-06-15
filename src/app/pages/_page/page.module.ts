@@ -6,6 +6,7 @@ import { PageRoutingModule } from './page-routing.module';
 import { SliderModule } from '../../layout/slider/slider.module';
 import { HeaderModule } from '../../layout/header/header.module';
 import { HomeModule } from '../_home/home.module';
+import { AboutMeModule } from '../_about-me/about-me.module';
 
 @NgModule({
   imports: [
@@ -13,7 +14,8 @@ import { HomeModule } from '../_home/home.module';
     PageRoutingModule,
     SliderModule,
     HeaderModule,
-    HomeModule
+    HomeModule,
+    AboutMeModule
   ],
   declarations: [
     RootComponent

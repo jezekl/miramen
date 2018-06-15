@@ -16,6 +16,8 @@
   letter-spacing: 2.5rem;
   text-align: center;
   margin-top: 10rem;
+  color: map-get($theme, text-secondary);
+  font-family: map-get($theme, font-primary);
 }
 
 .home__name {
@@ -25,6 +27,7 @@
   letter-spacing: 0.5rem;
   font-weight: map-get($theme, font-weight-normal);
   color: map-get($theme, color-primary);
+  font-family: map-get($theme, font-primary);
 }
 
 .home__button {
