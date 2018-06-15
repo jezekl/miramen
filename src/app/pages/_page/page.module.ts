@@ -7,6 +7,7 @@ import { SliderModule } from '../../layout/slider/slider.module';
 import { HeaderModule } from '../../layout/header/header.module';
 import { HomeModule } from '../_home/home.module';
 import { AboutMeModule } from '../_about-me/about-me.module';
+import { ContactModule } from '../_contact/contact.module';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { AboutMeModule } from '../_about-me/about-me.module';
     SliderModule,
     HeaderModule,
     HomeModule,
-    AboutMeModule
+    AboutMeModule,
+    ContactModule
   ],
   declarations: [
     RootComponent

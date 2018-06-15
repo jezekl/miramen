@@ -39,7 +39,7 @@
   transition: background-color 200ms, color 200ms !important;
 
   &:hover {
-    color: map-get($theme, text-secondary);
+    color: map-get($theme, text-primary);
   }
 }
 
