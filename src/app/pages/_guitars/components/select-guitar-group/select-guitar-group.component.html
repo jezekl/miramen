@@ -1,0 +1,9 @@
+<div class="select-group">
+  <button
+    class="select-group__button"
+    *ngFor="let group of groups"
+    (click)="groupChange.emit(group)"
+    [mcrai-button]="activeGroup?.name === group.name ? 'positive' : 'neutral'"
+  >{{ group.name }}</button>
+</div>
+

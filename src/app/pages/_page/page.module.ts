@@ -8,6 +8,7 @@ import { HeaderModule } from '../../layout/header/header.module';
 import { HomeModule } from '../_home/home.module';
 import { AboutMeModule } from '../_about-me/about-me.module';
 import { ContactModule } from '../_contact/contact.module';
+import { GuitarsModule } from '../_guitars/guitars.module';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { ContactModule } from '../_contact/contact.module';
     HeaderModule,
     HomeModule,
     AboutMeModule,
-    ContactModule
+    ContactModule,
+    GuitarsModule
   ],
   declarations: [
     RootComponent
