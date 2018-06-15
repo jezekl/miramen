@@ -3,9 +3,9 @@ $header-height: 11rem;
 $theme: (
   font-primary: ('Domine', sans-serif),
 
-  font-weight-light:  400,
+  font-weight-light:  300,
   font-weight-normal: 500,
-  font-weight-bold:   600,
+  font-weight-bold:   700,
 
   text-primary:     rgb(255, 255, 255),
   text-secondary:   rgb(75, 71, 70),
@@ -14,7 +14,7 @@ $theme: (
   color-primary:   rgb(189, 146, 103),
   color-secondary: rgb(0, 0, 0),
 
-  button-positive: rgb(104, 100, 97),
+  button-positive: rgb(189, 146, 103),
   button-negative: rgb(104, 100, 97),
   button-neutral:  rgb(104, 100, 97),
 

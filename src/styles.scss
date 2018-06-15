@@ -1,21 +1,45 @@
 @import "scss/variables";
 @import "scss/reset";
 
+@import "~ui/core/styles/theme";
+
 @font-face {
   font-family: 'Domine';
   src: url('assets/fonts/Domine-Regular.ttf') format('truetype');
-  font-weight: normal;
+  font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Domine';
   src: url('assets/fonts/Domine-Bold.ttf') format('truetype');
-  font-weight: bold;
+  font-weight: 700;
   font-style: normal;
 }
+
+@include create-theme2($theme);
 
 .mcrai-button {
   background-color: transparent;
   text-transform: uppercase;
+  transition: background-color 200ms, color 200ms !important;
+
+  &:hover {
+    color: map-get($theme, text-primary);
+  }
+}
+
+.mcrai-button--positive {
+  border: 0.2rem solid map-get($theme, button-positive) !important;
+  color: map-get($theme, button-positive);
+}
+
+.mcrai-button--negative {
+  border: 0.2rem solid map-get($theme, button-negative) !important;
+  color: map-get($theme, button-negative);
+}
+
+.mcrai-button--neutral {
+  border: 0.2rem solid map-get($theme, button-neutral) !important;
+  color: map-get($theme, button-neutral);
 }
