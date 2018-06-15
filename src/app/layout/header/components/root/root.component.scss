@@ -9,6 +9,6 @@
   left: 0;
   right: 0;
   height: $header-height;
-  border-bottom: 0.1rem solid map-get($theme, line-secondary);
+  border-bottom: .1rem solid map-get($theme, line-secondary);
   z-index: 2;
 }

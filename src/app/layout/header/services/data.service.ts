@@ -9,11 +9,11 @@ export const NAVIGATION: NavLink[] = [
     name: 'Home',
     url: '/home'
   }, {
-    name: 'Kytary',
-    url: '/kytary'
-  }, {
     name: 'O mně',
     url: '/o-mne'
+  }, {
+    name: 'Kytary',
+    url: '/kytary'
   }, {
     name: 'Kontakt',
     url: '/kontakt'

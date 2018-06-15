@@ -18,12 +18,13 @@
 }
 
 .nav-list__item {
-  margin: 0 1.5rem;
+  margin: 0 2rem;
 }
 
 .nav-list__button {
   color: map-get($theme, text-primary);
   position: relative;
+  font-size: 1.5rem;
 
   &:hover, &.nav-list__button--active {
     .nav-list__line {
