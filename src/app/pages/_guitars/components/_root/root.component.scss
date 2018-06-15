@@ -1,0 +1,35 @@
+
+.group-selector {
+  display: block;
+  margin-top: 4rem;
+}
+
+.guitar-overview {
+  margin-top: 4rem;
+  position: relative;
+  height: 100%;
+}
+
+.guitar-overview__carousel {
+  height: 100%;
+}
+
+.guitar-overview__control {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 5;
+}
+
+.guitar-overview__control--prev {
+  left: 2rem;
+}
+
+.guitar-overview__control--next {
+  right: 2rem;
+}
+
+.guitar-overview__control-icon {
+  font-size: 3rem !important;
+}
