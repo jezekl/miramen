@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { McRAIListModule } from 'ui';
+import { McRAIListModule } from 'mcrai-ui';
 
 import { RootComponent } from './components/_root/root.component';
 

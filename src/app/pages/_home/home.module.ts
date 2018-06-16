@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { McRAIButtonModule } from 'ui';
+import { McRAIButtonModule } from 'mcrai-ui';
 
 import { RootComponent } from './components/_root/root.component';
 
