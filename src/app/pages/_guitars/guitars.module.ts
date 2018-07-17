@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { McRAIButtonModule, McRAICarouselModule, McRAIIconModule } from 'mcrai-ui';
+import { McRAIButtonModule, McRAICarouselModule, McRAIIconModule, McRAIMediaModule } from 'mcrai-ui';
 
 import { RootComponent } from './components/_root/root.component';
 import { SelectGuitarGroupComponent } from './components/select-guitar-group/select-guitar-group.component';
@@ -11,7 +11,8 @@ import { GuitarPreviewComponent } from './components/guitar-preview/guitar-previ
     CommonModule,
     McRAIButtonModule,
     McRAICarouselModule,
-    McRAIIconModule
+    McRAIIconModule,
+    McRAIMediaModule
   ],
   declarations: [
     RootComponent,

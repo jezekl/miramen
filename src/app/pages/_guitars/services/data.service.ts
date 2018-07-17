@@ -9,41 +9,141 @@ export const GUITAR_GROUPS: GuitarGroup[] = [
     name: 'Steel guitar',
     guitars: [
       {
-        name: 'Guitar 1',
+        name: 'Grand concert Cocobolo italian spruce',
         description: '',
-        params: []
+        params: [
+          {
+            name: 'Tělo',
+            value: 'Cocobolo'
+          }, {
+            name: 'Krk',
+            value: 'Mahagon'
+          }, {
+            name: 'Hmatník',
+            value: 'Eben'
+          }, {
+            name: 'Mechanika',
+            value: 'Gotoh'
+          }, {
+            name: 'Lemy',
+            value: 'Eben'
+          }, {
+            name: 'Lak-Top',
+            value: 'Šelak'
+          }, {
+            name: 'Lak-Tělo',
+            value: 'Nitro gloss'
+          }
+        ],
+        images: [
+          {
+            path: 'assets/images/JUMBO1.png',
+            width: 411,
+            height: 1438
+          }
+        ]
       }, {
-        name: 'Guitar 2',
+        name: 'Grand concert Mahagon cedr',
         description: '',
-        params: []
+        params: [
+          {
+            name: 'Tělo',
+            value: ''
+          }, {
+            name: 'Krk',
+            value: ''
+          }, {
+            name: 'Hmatník',
+            value: ''
+          }, {
+            name: 'Mechanika',
+            value: ''
+          }, {
+            name: 'Lemy',
+            value: ''
+          }, {
+            name: 'Lak-Top',
+            value: ''
+          }, {
+            name: 'Lak-Tělo',
+            value: ''
+          }
+        ],
+        images: [
+          {
+            path: 'assets/images/JUMBO3.png',
+            width: 411,
+            height: 1438
+          }
+        ]
       }, {
-        name: 'Guitar 3',
+        name: 'Grand concert Mahagon cedr',
         description: '',
-        params: []
+        params: [
+          {
+            name: 'Tělo',
+            value: ''
+          }, {
+            name: 'Krk',
+            value: ''
+          }, {
+            name: 'Hmatník',
+            value: ''
+          }, {
+            name: 'Mechanika',
+            value: ''
+          }, {
+            name: 'Lemy',
+            value: ''
+          }, {
+            name: 'Lak-Top',
+            value: ''
+          }, {
+            name: 'Lak-Tělo',
+            value: ''
+          }
+        ],
+        images: [
+          {
+            path: 'assets/images/ELECTRIC1.png',
+            width: 411,
+            height: 1438
+          }
+        ]
       }, {
-        name: 'Guitar 4',
+        name: 'Grand concert Mahagon cedr',
         description: '',
-        params: []
-      }, {
-        name: 'Guitar 5',
-        description: '',
-        params: []
-      }, {
-        name: 'Guitar 6',
-        description: '',
-        params: []
-      }, {
-        name: 'Guitar 7',
-        description: '',
-        params: []
-      }, {
-        name: 'Guitar 8',
-        description: '',
-        params: []
-      }, {
-        name: 'Guitar 9',
-        description: '',
-        params: []
+        params: [
+          {
+            name: 'Tělo',
+            value: ''
+          }, {
+            name: 'Krk',
+            value: ''
+          }, {
+            name: 'Hmatník',
+            value: ''
+          }, {
+            name: 'Mechanika',
+            value: ''
+          }, {
+            name: 'Lemy',
+            value: ''
+          }, {
+            name: 'Lak-Top',
+            value: ''
+          }, {
+            name: 'Lak-Tělo',
+            value: ''
+          }
+        ],
+        images: [
+          {
+            path: 'assets/images/ELECTRIC2.png',
+            width: 411,
+            height: 1438
+          }
+        ]
       }
     ]
   }, {
