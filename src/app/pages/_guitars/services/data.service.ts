@@ -6,7 +6,7 @@ import { GuitarGroup } from '../models/guitar-group';
 
 export const GUITAR_GROUPS: GuitarGroup[] = [
   {
-    name: 'Steel guitar',
+    name: 'Akustické',
     guitars: [
       {
         name: 'Grand concert Cocobolo italian spruce',
@@ -15,6 +15,9 @@ export const GUITAR_GROUPS: GuitarGroup[] = [
           {
             name: 'Tělo',
             value: 'Cocobolo'
+          }, {
+            name: 'Top',
+            value: 'Italian smrk'
           }, {
             name: 'Krk',
             value: 'Mahagon'
@@ -28,10 +31,121 @@ export const GUITAR_GROUPS: GuitarGroup[] = [
             name: 'Lemy',
             value: 'Eben'
           }, {
-            name: 'Lak-Top',
+            name: 'Lak top',
             value: 'Šelak'
           }, {
-            name: 'Lak-Tělo',
+            name: 'Lak tělo',
+            value: 'Nitro gloss'
+          }
+        ],
+        images: [
+          {
+            path: 'assets/images/GRAND_CONCERT_COCOBOLO_ITALIAN_SMRK.png',
+            width: 411,
+            height: 1438
+          }
+        ]
+      }, {
+        name: 'Grand concert Mahagon cedr',
+        description: '',
+        params: [
+          {
+            name: 'Tělo',
+            value: 'Mahagon'
+          }, {
+            name: 'Top',
+            value: 'Cedr'
+          }, {
+            name: 'Krk',
+            value: 'Mahagon'
+          }, {
+            name: 'Hmatník',
+            value: 'Eben'
+          }, {
+            name: 'Mechanika',
+            value: 'Gotoh'
+          }, {
+            name: 'Lemy',
+            value: 'Eben'
+          }, {
+            name: 'Lak top',
+            value: 'Šelak'
+          }, {
+            name: 'Lak tělo',
+            value: 'Nitro gloss'
+          }, {
+            name: 'Menzura',
+            value: '650mm'
+          }
+        ],
+        images: [
+          {
+            path: 'assets/images/GRAND_CONCERT_MAHAGON_CEDR.png',
+            width: 411,
+            height: 1438
+          }
+        ]
+      }, {
+        name: 'Grand concert Ovangkol Engelmann spruce',
+        description: '',
+        params: [
+          {
+            name: 'Tělo',
+            value: 'Ovangkol'
+          }, {
+            name: 'Top',
+            value: 'Engelmann smrk'
+          }, {
+            name: 'Krk',
+            value: 'Mahagon'
+          }, {
+            name: 'Hmatník',
+            value: 'Eben'
+          }, {
+            name: 'Mechanika',
+            value: 'Gotoh'
+          }, {
+            name: 'Lemy',
+            value: 'Eben a Ziricote'
+          }, {
+            name: 'Lak',
+            value: 'Nitro gloss'
+          }
+        ],
+        images: [
+          {
+            path: 'assets/images/GRAND_CONCERT_OVANGKOL_ENGELMANN_SMRK.png',
+            width: 411,
+            height: 1438
+          }
+        ]
+      }, {
+        name: 'Jumbo 1',
+        description: '',
+        params: [
+          {
+            name: 'Tělo',
+            value: 'Indiam palisandr'
+          }, {
+            name: 'Top',
+            value: 'Cedr'
+          }, {
+            name: 'Krk',
+            value: 'Mahagon'
+          }, {
+            name: 'Hmatník',
+            value: 'Palisandr'
+          }, {
+            name: 'Mechanika',
+            value: 'Gotoh'
+          }, {
+            name: 'Lemy',
+            value: 'Javor'
+          }, {
+            name: 'Lak top',
+            value: 'Šelak'
+          }, {
+            name: 'Lak tělo',
             value: 'Nitro gloss'
           }
         ],
@@ -43,30 +157,70 @@ export const GUITAR_GROUPS: GuitarGroup[] = [
           }
         ]
       }, {
-        name: 'Grand concert Mahagon cedr',
+        name: 'Jumbo 2',
         description: '',
         params: [
           {
             name: 'Tělo',
-            value: ''
+            value: 'Ovangkol'
+          }, {
+            name: 'Top',
+            value: 'Cedr'
           }, {
             name: 'Krk',
-            value: ''
+            value: 'Mahagon'
           }, {
             name: 'Hmatník',
-            value: ''
+            value: 'Palisandr'
           }, {
             name: 'Mechanika',
-            value: ''
+            value: 'Gotoh'
           }, {
             name: 'Lemy',
-            value: ''
+            value: 'Palisandr'
           }, {
-            name: 'Lak-Top',
-            value: ''
+            name: 'Lak',
+            value: 'Nitro gloss'
+          }
+        ],
+        images: [
+          {
+            path: 'assets/images/JUMBO2.png',
+            width: 411,
+            height: 1438
+          }
+        ]
+      }, {
+        name: 'Jumbo 3',
+        description: '',
+        params: [
+          {
+            name: 'Tělo',
+            value: 'Jasan'
           }, {
-            name: 'Lak-Tělo',
-            value: ''
+            name: 'Top',
+            value: 'Javor'
+          }, {
+            name: 'Krk',
+            value: 'Javor'
+          }, {
+            name: 'Hmatník',
+            value: 'Palisandr'
+          }, {
+            name: 'Mechanika',
+            value: 'Palisandr'
+          }, {
+            name: 'Lak',
+            value: 'Nitro gloss'
+          }, {
+            name: 'Menzura',
+            value: '650mm'
+          }, {
+            name: 'Snímače',
+            value: 'Seymour Duncan'
+          }, {
+            name: 'RM',
+            value: 'Pickup'
           }
         ],
         images: [
@@ -76,31 +230,39 @@ export const GUITAR_GROUPS: GuitarGroup[] = [
             height: 1438
           }
         ]
-      }, {
-        name: 'Grand concert Mahagon cedr',
+      }
+    ]
+  }, {
+    name: 'Elektrické',
+    guitars: [
+      {
+        name: 'Electric Guitar 1',
         description: '',
         params: [
           {
             name: 'Tělo',
-            value: ''
+            value: 'Olše'
+          }, {
+            name: 'Top',
+            value: 'Mahagon'
           }, {
             name: 'Krk',
-            value: ''
+            value: 'Mahagon'
           }, {
             name: 'Hmatník',
-            value: ''
+            value: 'Eben'
           }, {
             name: 'Mechanika',
-            value: ''
+            value: 'Gotoh'
           }, {
-            name: 'Lemy',
-            value: ''
+            name: 'Lak',
+            value: 'Nitro gloss'
           }, {
-            name: 'Lak-Top',
-            value: ''
+            name: 'Menzura',
+            value: '650mm'
           }, {
-            name: 'Lak-Tělo',
-            value: ''
+            name: 'Snímače',
+            value: 'RM-pickup'
           }
         ],
         images: [
@@ -111,30 +273,36 @@ export const GUITAR_GROUPS: GuitarGroup[] = [
           }
         ]
       }, {
-        name: 'Grand concert Mahagon cedr',
+        name: 'Electric Guitar 2',
         description: '',
         params: [
           {
             name: 'Tělo',
-            value: ''
+            value: 'Jasan'
+          }, {
+            name: 'Top',
+            value: 'Javor'
           }, {
             name: 'Krk',
-            value: ''
+            value: 'Javor'
           }, {
             name: 'Hmatník',
-            value: ''
+            value: 'Palisandr'
           }, {
             name: 'Mechanika',
-            value: ''
+            value: 'Gotoh'
           }, {
-            name: 'Lemy',
-            value: ''
+            name: 'Lak',
+            value: 'Nitro gloss'
           }, {
-            name: 'Lak-Top',
-            value: ''
+            name: 'Menzura',
+            value: '650mm'
           }, {
-            name: 'Lak-Tělo',
-            value: ''
+            name: 'Snímače',
+            value: 'Seymour'
+          }, {
+            name: 'Duncan RM',
+            value: 'Pickup'
           }
         ],
         images: [
@@ -146,15 +314,6 @@ export const GUITAR_GROUPS: GuitarGroup[] = [
         ]
       }
     ]
-  }, {
-    name: 'Nylon guitar',
-    guitars: []
-  }, {
-    name: 'Electric guitar',
-    guitars: []
-  }, {
-    name: 'Jazz guitar',
-    guitars: []
   }
 ];
 
