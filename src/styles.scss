@@ -68,3 +68,7 @@
   border: 0.2rem solid map-get($theme, button-neutral) !important;
   color: map-get($theme, button-neutral);
 }
+
+.mcrai-carousel__item:last-child {
+  padding-right: 20px !important;
+}

@@ -1,13 +1,19 @@
+.page--guitars {
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0;
+}
+
 
 .group-selector {
   display: block;
-  margin-top: 4rem;
+  flex: 0 0 auto;
 }
 
 .guitar-overview {
-  margin-top: 4rem;
+  margin: 4rem 0 2rem 0;
   position: relative;
-  height: 100%;
+  width: 100%;
 }
 
 .guitar-overview__carousel {

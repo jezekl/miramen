@@ -1,22 +1,25 @@
-<miramen-select-guitar-group
-  class="group-selector"
-  [groups]="guitarGroups"
-  [activeGroup]="activeGuitarGroup"
-  (groupChange)="activeGuitarGroup = $event"
-></miramen-select-guitar-group>
+<div class="page page--guitars">
+  <miramen-select-guitar-group
+    class="group-selector"
+    [groups]="guitarGroups"
+    [activeGroup]="activeGuitarGroup"
+    (groupChange)="activeGuitarGroup = $event"
+  ></miramen-select-guitar-group>
 
-<div class="guitar-overview" *ngIf="activeGuitarGroup && activeGuitarGroup.guitars.length > 0">
-  <button class="guitar-overview__control guitar-overview__control--prev" (click)="carousel.prev()" [disabled]="carousel.isStart()" mcrai-icon-button>
-    <mcrai-icon class="guitar-overview__control-icon" color="secondary">arrow_left</mcrai-icon>
-  </button>
-  <button class="guitar-overview__control guitar-overview__control--next" (click)="carousel.next()" [disabled]="carousel.isEnd()" mcrai-icon-button>
-    <mcrai-icon class="guitar-overview__control-icon" color="secondary">arrow_right</mcrai-icon>
-  </button>
-  <mcrai-carousel class="guitar-overview__carousel" #carousel>
-    <ng-container *ngFor="let guitar of activeGuitarGroup?.guitars">
-      <div class="guitar" *mcraiCarouselItem="400">
-        <miramen-guitar-preview [guitar]="guitar"></miramen-guitar-preview>
-      </div>
-    </ng-container>
-  </mcrai-carousel>
+  <div class="guitar-overview" *ngIf="activeGuitarGroup && activeGuitarGroup.guitars.length > 0">
+    <button class="guitar-overview__control guitar-overview__control--prev" (click)="carousel.prev()" [disabled]="carousel.isStart()" mcrai-icon-button>
+      <mcrai-icon class="guitar-overview__control-icon" color="secondary">arrow_left</mcrai-icon>
+    </button>
+    <button class="guitar-overview__control guitar-overview__control--next" (click)="carousel.next()" [disabled]="carousel.isEnd()" mcrai-icon-button>
+      <mcrai-icon class="guitar-overview__control-icon" color="secondary">arrow_right</mcrai-icon>
+    </button>
+    <mcrai-carousel class="guitar-overview__carousel" #carousel>
+      <ng-container *ngFor="let guitar of activeGuitarGroup?.guitars">
+        <div class="guitar" *mcraiCarouselItem="400">
+          <miramen-guitar-preview [guitar]="guitar"></miramen-guitar-preview>
+        </div>
+      </ng-container>
+    </mcrai-carousel>
+  </div>
 </div>
+
