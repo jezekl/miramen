@@ -68,3 +68,51 @@
   border: 0.2rem solid map-get($theme, button-neutral) !important;
   color: map-get($theme, button-neutral);
 }
+
+.line-left,
+.line-right,
+.line-top,
+.line-bottom {
+  position: relative;
+}
+
+.line-left:before,
+.line-right:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 85px;
+  height: 1px;
+  margin: auto;
+  z-index: 2;
+  border-top: 1px solid map-get($theme, color-primary);
+  display: block;
+}
+
+.line-top:before,
+.line-bottom:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 85px;
+  z-index: 2;
+  width: calc(50% - 1px);
+  border-right: 1px solid map-get($theme, color-primary);
+}
+
+.line-left:before {
+  left: 0;
+}
+
+.line-right:before {
+  right: 0;
+}
+
+.line-top:before {
+  top: 0;
+}
+
+.line-bottom:before {
+  bottom: 0;
+}
