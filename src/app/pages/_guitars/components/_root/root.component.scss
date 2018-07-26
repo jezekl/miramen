@@ -4,11 +4,22 @@
   padding: 0;
 }
 
-
 .group-selector {
   display: block;
   flex: 0 0 auto;
 }
+
+.guitar-list {
+  margin: 4rem 0;
+  display: flex;
+  width: 100%;
+}
+
+.guitar-list__item { }
+
+
+
+/*
 
 .guitar-overview {
   margin: 4rem 0 2rem 0;
@@ -39,3 +50,4 @@
 .guitar-overview__control-icon {
   font-size: 3rem !important;
 }
+*/

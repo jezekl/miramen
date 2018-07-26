@@ -1,5 +1,8 @@
-.guitar-preview {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+:host {
+  display: block;
+  flex: 0 0 auto;
+  background: no-repeat bottom center;
+  background-size: cover;
+  position: relative;
+  cursor: pointer;
 }
