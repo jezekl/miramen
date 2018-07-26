@@ -1,7 +1,8 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
-import { filter, map, takeUntil } from 'rxjs/operators';
-import { Subject } from 'rxjs';
+import { Component, ElementRef, OnDestroy, OnInit } from '@angular/core';
+import { ActivatedRoute, Params, Router } from '@angular/router';
+import { debounceTime, filter, map, takeUntil } from 'rxjs/operators';
+import { fromEvent, Subject } from 'rxjs';
+
 import { NavLink } from '../../../../models/nav-link';
 import { DataService } from '../../../../layout/header/services/data.service';
 
@@ -22,7 +23,9 @@ export class RootComponent implements OnInit, OnDestroy {
 
   constructor(
     private _activatedRoute: ActivatedRoute,
-    private _dataService: DataService
+    private _dataService: DataService,
+    private _elRef: ElementRef,
+    private _router: Router
   ) { }
 
   ngOnInit() {
@@ -42,6 +45,26 @@ export class RootComponent implements OnInit, OnDestroy {
         const index = this._navigation.findIndex(link => link.url.replace('/', '') === value);
 
         this._activeIndex = index === -1 ? 0 : index;
+      });
+
+    fromEvent(this._elRef.nativeElement, 'mousewheel')
+      .pipe(
+        takeUntil(this._destroy),
+        debounceTime(100)
+      )
+      .subscribe((event: any) => {
+        let nextIndex = this._activeIndex;
+        switch (true) {
+          case event.deltaY > 0 && this._activeIndex < this._navigation.length - 1:
+            nextIndex = this._activeIndex + 1;
+            break;
+          case event.deltaY < 0 && this._activeIndex > 0:
+            nextIndex = this._activeIndex - 1;
+            this._activeIndex--;
+            break;
+        }
+
+        this._router.navigateByUrl(this._navigation[nextIndex].url);
       });
   }
 
