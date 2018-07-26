@@ -3,7 +3,11 @@
 :host /deep/ {
   .page {
     height: 100%;
-    padding: 6% 30% 20% 10%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 15%;
+    flex-direction: column;
   }
 
   .page__headline {
@@ -27,5 +31,69 @@
 
   .page__content {
     padding: 3% 0 0 10%;
+  }
+}
+
+.line-left,
+.line-right,
+.line-top,
+.line-bottom {
+  position: relative;
+}
+
+.line-left:before,
+.line-right:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 8.5rem;
+  height: 0.1rem;
+  margin: auto;
+  z-index: 2;
+  border-top: 0.1rem solid map-get($theme, color-primary);
+  display: block;
+}
+
+.line-top:before,
+.line-bottom:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 8.5rem;
+  z-index: 2;
+  width: calc(50% - 1px);
+  border-right: 0.1rem solid map-get($theme, color-primary);
+}
+
+.line-left:before {
+  left: 0;
+}
+
+.line-right:before {
+  right: 0;
+}
+
+.line-top:before {
+  top: 0;
+}
+
+.line-bottom:before {
+  bottom: 0;
+}
+
+.motto {
+  position: relative;
+
+  &:after {
+    position: absolute;
+    left: -5rem;
+    bottom: 11rem;
+    content: 'kytary od míry na míru';
+    color: map-get($theme, text-secondary);
+    transform: rotate(-90deg);
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 0.3rem;
   }
 }
