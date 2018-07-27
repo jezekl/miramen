@@ -9,14 +9,36 @@
   flex: 0 0 auto;
 }
 
-.guitar-list {
-  margin: 4rem 0;
-  display: flex;
+.guitar-overview {
+  position: relative;
   width: 100%;
 }
 
-.guitar-list__item { }
+.guitar-list {
+  margin: 4rem 0;
+  display: flex;
+  list-style: none;
+}
 
+.guitar-list__item {
+  flex: 0 0 auto;
+}
+
+.guital-list__control {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 5;
+}
+
+.guital-list__control--prev {
+  left: 2rem;
+}
+
+.guital-list__control--next {
+  right: 2rem;
+}
 
 
 /*

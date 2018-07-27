@@ -7,6 +7,6 @@ export const fadeInStaggerAnimation = trigger('fadeInStagger', [
       stagger(70, [
         animate('600ms cubic-bezier(.25, .8, .25, 1)', style({ opacity: 1 }))
       ])
-    ])
+    ],  { optional: true })
   ])
 ]);

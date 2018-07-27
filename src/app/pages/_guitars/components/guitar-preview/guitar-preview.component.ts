@@ -14,16 +14,14 @@ import { scaleAnimation } from '../../../../utility/animations/scale';
 })
 export class GuitarPreviewComponent implements OnInit {
 
-  @HostBinding('style.background-image') image;
   @HostBinding('@scale') state = 'inactive';
 
   @Input() guitar: Guitar;
+  @Input() dimensions: { width: number, height: number };
 
   constructor() { }
 
-  ngOnInit() {
-    this.image = `url(${this.guitar.images[0].path})`;
-  }
+  ngOnInit() { }
 
   @HostListener('mouseenter')
   public onEnter(): void {
