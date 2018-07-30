@@ -6,9 +6,14 @@ import { RootComponent } from './components/_root/root.component';
 const routes: Routes = [
   {
     path: '',
-    component: RootComponent
+    redirectTo: 'home/',
+    pathMatch: 'full'
   }, {
-    path: ':route',
+    path: ':verticalRoute',
+    redirectTo: ':verticalRoute/',
+    pathMatch: 'full'
+  }, {
+    path: ':verticalRoute/:horizontalRoute',
     component: RootComponent
   }
 ];

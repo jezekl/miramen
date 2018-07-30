@@ -1,11 +1,12 @@
-import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { Component, EventEmitter, OnDestroy, OnInit, Output, ViewChild } from '@angular/core';
 import { Subject } from 'rxjs';
 import { filter, takeUntil } from 'rxjs/operators';
 
-import { DataService } from '../../services/data.service';
+import { GuitarService } from '../../services/guitar.service';
 import { GuitarGroup } from '../../models/guitar-group';
 import { fadeInStaggerAnimation } from '../../../../utility/animations/fade-in-stagger';
 import { scaleAnimation } from '../../../../utility/animations/scale';
+import { Guitar } from '../../models/guitar';
 
 @Component({
   selector: 'miramen-guitars',
@@ -53,7 +54,7 @@ export class RootComponent implements OnInit, OnDestroy {
   }
 
   constructor(
-    private _dataService: DataService
+    private _dataService: GuitarService
   ) { }
 
   ngOnInit() {

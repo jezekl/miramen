@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { DataService } from '../../services/data.service';
+import { NavigationService } from '../../services/navigation.service';
 import { NavLink } from '../../../../models/nav-link';
 
 @Component({
@@ -17,11 +17,11 @@ export class RootComponent implements OnInit {
   }
 
   constructor(
-    private _dataService: DataService
+    private _navigationService: NavigationService
   ) { }
 
   ngOnInit() {
-    this._navigation$ = this._dataService.getNavigation();
+    this._navigation$ = this._navigationService.getNavigation();
   }
 
 }

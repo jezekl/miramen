@@ -4,7 +4,9 @@ import { debounceTime, filter, map, takeUntil } from 'rxjs/operators';
 import { fromEvent, Subject } from 'rxjs';
 
 import { NavLink } from '../../../../models/nav-link';
-import { DataService } from '../../../../layout/header/services/data.service';
+import { NavigationService } from '../../../../layout/header/services/navigation.service';
+import { Guitar } from '../../../_guitars/models/guitar';
+import { GuitarService } from '../../../_guitars/services/guitar.service';
 
 @Component({
   selector: 'miramen-page',
@@ -16,20 +18,26 @@ export class RootComponent implements OnInit, OnDestroy {
 
   private _navigation: NavLink[] = [];
 
-  private _activeIndex = 0;
-  get activeIndex(): number {
-    return this._activeIndex;
+  private _verticalActiveIndex = 0;
+  get verticalActiveIndex(): number {
+    return this._verticalActiveIndex;
+  }
+
+  private _horizontalActiveIndex = 0;
+  get horizontalActiveIndex(): number {
+    return this._horizontalActiveIndex;
   }
 
   constructor(
     private _activatedRoute: ActivatedRoute,
-    private _dataService: DataService,
+    private _navigationService: NavigationService,
+    private _guitarsService: GuitarService,
     private _elRef: ElementRef,
     private _router: Router
   ) { }
 
   ngOnInit() {
-    this._dataService.getNavigation()
+    this._navigationService.getNavigation()
       .pipe(
         takeUntil(this._destroy)
       )
@@ -44,7 +52,17 @@ export class RootComponent implements OnInit, OnDestroy {
       .subscribe(value => {
         const index = this._navigation.findIndex(link => link.url.replace('/', '') === value);
 
-        this._activeIndex = index === -1 ? 0 : index;
+        this._verticalActiveIndex = index === -1 ? 0 : index;
+      });
+
+    this._activatedRoute.params
+      .pipe(
+        takeUntil(this._destroy),
+        filter((value: Params) => value.hasOwnProperty('horizontalRoute')),
+        map((value: Params) => value.horizontalRoute)
+      )
+      .subscribe(value => {
+        this._horizontalActiveIndex = value ? 1 : 0;
       });
 
     fromEvent(this._elRef.nativeElement, 'mousewheel')
@@ -53,14 +71,14 @@ export class RootComponent implements OnInit, OnDestroy {
         debounceTime(100)
       )
       .subscribe((event: any) => {
-        let nextIndex = this._activeIndex;
+        let nextIndex = this._verticalActiveIndex;
         switch (true) {
-          case event.deltaY > 0 && this._activeIndex < this._navigation.length - 1:
-            nextIndex = this._activeIndex + 1;
+          case event.deltaY > 0 && this._verticalActiveIndex < this._navigation.length - 1:
+            nextIndex = this._verticalActiveIndex + 1;
             break;
-          case event.deltaY < 0 && this._activeIndex > 0:
-            nextIndex = this._activeIndex - 1;
-            this._activeIndex--;
+          case event.deltaY < 0 && this._verticalActiveIndex > 0:
+            nextIndex = this._verticalActiveIndex - 1;
+            this._verticalActiveIndex--;
             break;
         }
 

@@ -24,7 +24,7 @@ import { startWith, takeUntil, throttleTime } from 'rxjs/operators';
 export class VerticalSliderComponent implements OnInit, OnDestroy, AfterContentInit, OnChanges {
   private _destroy: Subject<null> = new Subject<null>();
 
-  @ContentChildren(SlideComponent) slides: QueryList<SlideComponent> = new QueryList<SlideComponent>();
+  @ContentChildren(SlideComponent, { descendants: true }) slides: QueryList<SlideComponent> = new QueryList<SlideComponent>();
 
   @Input() activeIndex: number;
 

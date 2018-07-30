@@ -9,6 +9,7 @@ import { HomeModule } from '../_home/home.module';
 import { AboutMeModule } from '../_about-me/about-me.module';
 import { ContactModule } from '../_contact/contact.module';
 import { GuitarsModule } from '../_guitars/guitars.module';
+import { McRAIButtonModule } from 'mcrai-ui';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import { GuitarsModule } from '../_guitars/guitars.module';
     HomeModule,
     AboutMeModule,
     ContactModule,
-    GuitarsModule
+    GuitarsModule,
+    McRAIButtonModule
   ],
   declarations: [
     RootComponent

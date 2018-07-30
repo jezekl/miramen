@@ -5,10 +5,6 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  }, {
-    path: ':verticalRoute',
     loadChildren: './pages/_page/page.module#PageModule'
   }
 ];

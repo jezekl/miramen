@@ -23,7 +23,7 @@ export const NAVIGATION: NavLink[] = [
 @Injectable({
   providedIn: 'root'
 })
-export class DataService extends BaseService {
+export class NavigationService extends BaseService {
 
   public getNavigation(): Observable<NavLink[]> {
     const endpoint = this.buildUrl([]);

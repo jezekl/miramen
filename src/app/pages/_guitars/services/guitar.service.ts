@@ -10,6 +10,7 @@ export const GUITAR_GROUPS: GuitarGroup[] = [
     guitars: [
       {
         name: 'Grand concert Cocobolo italian spruce',
+        url: 'grand-concert-cocobolo-italian-spruce',
         description: '',
         params: [
           {
@@ -47,6 +48,7 @@ export const GUITAR_GROUPS: GuitarGroup[] = [
         ]
       }, {
         name: 'Grand concert Mahagon cedr',
+        url: 'grand-concert-mahagon-cedr',
         description: '',
         params: [
           {
@@ -87,6 +89,7 @@ export const GUITAR_GROUPS: GuitarGroup[] = [
         ]
       }, {
         name: 'Grand concert Ovangkol Engelmann spruce',
+        url: 'grand-concert-ovangkol-engelmann-spruce',
         description: '',
         params: [
           {
@@ -121,6 +124,7 @@ export const GUITAR_GROUPS: GuitarGroup[] = [
         ]
       }, {
         name: 'Jumbo 1',
+        url: 'jumbo-1',
         description: '',
         params: [
           {
@@ -158,6 +162,7 @@ export const GUITAR_GROUPS: GuitarGroup[] = [
         ]
       }, {
         name: 'Jumbo 2',
+        url: 'jumbo-2',
         description: '',
         params: [
           {
@@ -192,6 +197,7 @@ export const GUITAR_GROUPS: GuitarGroup[] = [
         ]
       }, {
         name: 'Jumbo 3',
+        url: 'jumbo-3',
         description: '',
         params: [
           {
@@ -237,6 +243,7 @@ export const GUITAR_GROUPS: GuitarGroup[] = [
     guitars: [
       {
         name: 'Electric Guitar 1',
+        url: 'electric-guitar-1',
         description: '',
         params: [
           {
@@ -274,6 +281,7 @@ export const GUITAR_GROUPS: GuitarGroup[] = [
         ]
       }, {
         name: 'Electric Guitar 2',
+        url: 'electric-guitar-2',
         description: '',
         params: [
           {
@@ -320,7 +328,7 @@ export const GUITAR_GROUPS: GuitarGroup[] = [
 @Injectable({
   providedIn: 'root'
 })
-export class DataService extends BaseService {
+export class GuitarService extends BaseService {
 
   public getGuitars(): Observable<GuitarGroup[]> {
     return of(GUITAR_GROUPS);

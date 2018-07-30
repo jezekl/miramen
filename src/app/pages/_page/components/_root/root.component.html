@@ -1,14 +1,22 @@
 <miramen-header></miramen-header>
 
-<miramen-vertical-slider [activeIndex]="activeIndex">
+<miramen-vertical-slider [activeIndex]="verticalActiveIndex">
   <miramen-slide class="line-bottom">
     <miramen-home></miramen-home>
   </miramen-slide>
   <miramen-slide class="motto">
     <miramen-about-me></miramen-about-me>
   </miramen-slide>
-  <miramen-slide class="motto">
-    <miramen-guitars></miramen-guitars>
+  <miramen-slide>
+    <miramen-horizontal-slider [activeIndex]="horizontalActiveIndex">
+      <miramen-slide class="motto">
+        <miramen-guitars></miramen-guitars>
+      </miramen-slide>
+      <miramen-slide>
+        <br><br><br><br><br>
+        <a [routerLink]="['/kytary']" mcrai-button>dfgdfgd</a>
+      </miramen-slide>
+    </miramen-horizontal-slider>
   </miramen-slide>
   <miramen-slide class="motto">
     <miramen-contact></miramen-contact>
