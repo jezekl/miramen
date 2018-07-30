@@ -1,0 +1,28 @@
+<div class="page">
+  <a [routerLink]="['/kytary']" mcrai-button>
+    <mcrai-icon>arrow_left</mcrai-icon>
+    zpět
+  </a>
+
+  <h1 class="page__headline">{{ activeGuitar?.name }}</h1>
+
+  <mcrai-row>
+    <mcrai-col>
+      <mcrai-dl>
+        <ng-container *ngFor="let param of activeGuitar?.params | slice:0:activeGuitar?.params.length / 2">
+          <mcrai-dt>{{ param.name }}</mcrai-dt>
+          <mcrai-dd>{{ param.value }}</mcrai-dd>
+        </ng-container>
+      </mcrai-dl>
+    </mcrai-col>
+    <mcrai-col>
+      <mcrai-dl>
+        <ng-container *ngFor="let param of activeGuitar?.params | slice:activeGuitar?.params.length / 2">
+          <mcrai-dt>{{ param.name }}</mcrai-dt>
+          <mcrai-dd>{{ param.value }}</mcrai-dd>
+        </ng-container>
+      </mcrai-dl>
+    </mcrai-col>
+  </mcrai-row>
+
+</div>

@@ -9,7 +9,7 @@ import { HomeModule } from '../_home/home.module';
 import { AboutMeModule } from '../_about-me/about-me.module';
 import { ContactModule } from '../_contact/contact.module';
 import { GuitarsModule } from '../_guitars/guitars.module';
-import { GuitarModule } from '../guitar/guitar.module';
+import { GuitarModule } from '../_guitar/guitar.module';
 
 @NgModule({
   imports: [
