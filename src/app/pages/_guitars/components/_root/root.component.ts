@@ -1,8 +1,6 @@
-import { Component, EventEmitter, OnDestroy, OnInit, Output, ViewChild } from '@angular/core';
+import { Component, EventEmitter, Input, OnDestroy, OnInit, Output, ViewChild } from '@angular/core';
 import { Subject } from 'rxjs';
-import { filter, takeUntil } from 'rxjs/operators';
 
-import { GuitarService } from '../../services/guitar.service';
 import { GuitarGroup } from '../../models/guitar-group';
 import { fadeInStaggerAnimation } from '../../../../utility/animations/fade-in-stagger';
 import { scaleAnimation } from '../../../../utility/animations/scale';
@@ -23,20 +21,16 @@ export class RootComponent implements OnInit, OnDestroy {
   @ViewChild('page') page;
   @ViewChild('carousel') carousel;
 
+  @Input() guitarGroups: GuitarGroup[];
+  @Input() activeGuitarGroup: GuitarGroup;
+
+  @Output() guitarChange: EventEmitter<Guitar> = new EventEmitter<Guitar>();
+  @Output() activeGroupChange: EventEmitter<GuitarGroup> = new EventEmitter<GuitarGroup>();
+
   private _activeIndex: number = 0;
 
-  private _guitarGroups: GuitarGroup[];
-  get guitarGroups(): GuitarGroup[] {
-    return this._guitarGroups;
-  }
-
-  private _activeGuitarGroup: GuitarGroup;
-  get activeGuitarGroup(): GuitarGroup {
-    return this._activeGuitarGroup;
-  }
-
   get previewDimensions() {
-    const guitar = this._activeGuitarGroup.guitars[0].images[0];
+    const guitar = this.activeGuitarGroup.guitars[0].images[0];
     const height = Math.round(this.page.nativeElement.offsetHeight - 270);
     const width = Math.round(height / guitar.height * guitar.width);
 
@@ -53,21 +47,9 @@ export class RootComponent implements OnInit, OnDestroy {
     };
   }
 
-  constructor(
-    private _dataService: GuitarService
-  ) { }
+  constructor() { }
 
-  ngOnInit() {
-    this._dataService.getGuitars()
-      .pipe(
-        takeUntil(this._destroy),
-        filter((value: GuitarGroup[] | null) => Array.isArray(value))
-      )
-      .subscribe((value: GuitarGroup[]) => {
-        this._guitarGroups = value;
-        this._activeGuitarGroup = value[0];
-      });
-  }
+  ngOnInit() { }
 
   ngOnDestroy() {
     this._destroy.next();
@@ -104,9 +86,9 @@ export class RootComponent implements OnInit, OnDestroy {
     }
   }
 
-
   public onActiveGroupChange(event: GuitarGroup): void {
-    this._activeGuitarGroup = event;
+    this.activeGroupChange.emit(event);
     this._activeIndex = 0;
   }
+
 }

@@ -10,11 +10,15 @@
   <miramen-slide>
     <miramen-horizontal-slider [activeIndex]="horizontalActiveIndex">
       <miramen-slide class="motto">
-        <miramen-guitars></miramen-guitars>
+        <miramen-guitars
+          [guitarGroups]="guitarGroups"
+          [activeGuitarGroup]="activeGuitarGroup"
+          (activeGroupChange)="activeGuitarGroup = $event"
+          (guitarChange)="activeGuitar = $event"
+        ></miramen-guitars>
       </miramen-slide>
       <miramen-slide>
-        <br><br><br><br><br>
-        <a [routerLink]="['/kytary']" mcrai-button>dfgdfgd</a>
+        <miramen-guitar [activeGuitar]="activeGuitar"></miramen-guitar>
       </miramen-slide>
     </miramen-horizontal-slider>
   </miramen-slide>

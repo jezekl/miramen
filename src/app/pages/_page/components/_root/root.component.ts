@@ -7,6 +7,7 @@ import { NavLink } from '../../../../models/nav-link';
 import { NavigationService } from '../../../../layout/header/services/navigation.service';
 import { Guitar } from '../../../_guitars/models/guitar';
 import { GuitarService } from '../../../_guitars/services/guitar.service';
+import { GuitarGroup } from '../../../_guitars/models/guitar-group';
 
 @Component({
   selector: 'miramen-page',
@@ -28,6 +29,27 @@ export class RootComponent implements OnInit, OnDestroy {
     return this._horizontalActiveIndex;
   }
 
+  private _guitarGroups: GuitarGroup[];
+  get guitarGroups(): GuitarGroup[] {
+    return this._guitarGroups;
+  }
+
+  private _activeGuitarGroup: GuitarGroup;
+  set activeGuitarGroup(value: GuitarGroup) {
+    this._activeGuitarGroup = value;
+  }
+  get activeGuitarGroup(): GuitarGroup {
+    return this._activeGuitarGroup;
+  }
+
+  private _activeGuitar: Guitar;
+  set activeGuitar(value: Guitar) {
+    this._activeGuitar = value;
+  }
+  get activeGuitar(): Guitar {
+    return this._activeGuitar;
+  }
+
   constructor(
     private _activatedRoute: ActivatedRoute,
     private _navigationService: NavigationService,
@@ -42,6 +64,16 @@ export class RootComponent implements OnInit, OnDestroy {
         takeUntil(this._destroy)
       )
       .subscribe(value => this._navigation = value);
+
+    this._guitarsService.getGuitars()
+      .pipe(
+        takeUntil(this._destroy),
+        filter((value: GuitarGroup[] | null) => Array.isArray(value))
+      )
+      .subscribe((value: GuitarGroup[]) => {
+        this._guitarGroups = value;
+        this._activeGuitarGroup = value[0];
+      });
 
     this._activatedRoute.params
       .pipe(
@@ -62,7 +94,12 @@ export class RootComponent implements OnInit, OnDestroy {
         map((value: Params) => value.horizontalRoute)
       )
       .subscribe(value => {
-        this._horizontalActiveIndex = value ? 1 : 0;
+        if (value) {
+          this._horizontalActiveIndex = 1;
+          this._activeGuitar = this._activeGuitarGroup.guitars.find(guitar => guitar.url === value);
+        } else {
+          this._horizontalActiveIndex = 0;
+        }
       });
 
     fromEvent(this._elRef.nativeElement, 'mousewheel')

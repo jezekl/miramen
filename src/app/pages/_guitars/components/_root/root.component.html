@@ -14,7 +14,7 @@
       #carousel
     >
       <li class="guitar-list__item" *ngFor="let guitar of activeGuitarGroup?.guitars">
-        <a [routerLink]="['/kytary', guitar.url]">
+        <a [routerLink]="['/kytary', guitar.url]" (click)="guitarChange.emit(guitar)">
           <miramen-guitar-preview
             [guitar]="guitar"
             [dimensions]="previewDimensions"
