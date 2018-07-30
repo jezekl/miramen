@@ -95,7 +95,12 @@ export class RootComponent implements OnInit, OnDestroy {
     const visibleCount = this.carousel.nativeElement.offsetWidth / this.previewDimensions.width;
     const offset = parseFloat('0.' + visibleCount.toString().split('.')[1]);
 
-    this._activeIndex = this._activeIndex + 1 - offset;
+    // @ts-ignore
+    if (this._activeIndex === parseInt(this._activeIndex, 10) && offset > 0 && offset < 1) {
+      this._activeIndex += 1 + (1 - offset);
+    } else {
+      this._activeIndex++;
+    }
   }
 
 
