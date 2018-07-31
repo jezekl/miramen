@@ -1,28 +1,41 @@
-<div class="page">
+<div class="page page--guitar" #page>
   <a class="back-button" [routerLink]="['/kytary']" mcrai-button>
     <mcrai-icon class="back-button__icon">arrow_left</mcrai-icon>
     zpět
   </a>
 
-  <h1 class="page__headline">{{ activeGuitar?.name }}</h1>
-
-  <mcrai-row>
-    <mcrai-col>
-      <mcrai-dl>
-        <ng-container *ngFor="let param of activeGuitar?.params | slice:0:activeGuitar?.params.length / 2">
-          <mcrai-dt>{{ param.name }}</mcrai-dt>
-          <mcrai-dd>{{ param.value }}</mcrai-dd>
-        </ng-container>
-      </mcrai-dl>
-    </mcrai-col>
-    <mcrai-col>
-      <mcrai-dl>
-        <ng-container *ngFor="let param of activeGuitar?.params | slice:activeGuitar?.params.length / 2">
-          <mcrai-dt>{{ param.name }}</mcrai-dt>
-          <mcrai-dd>{{ param.value }}</mcrai-dd>
-        </ng-container>
-      </mcrai-dl>
-    </mcrai-col>
-  </mcrai-row>
+  <div class="guitar-list-wrapper">
+    <ul class="guitar-list">
+      <li class="guitar-list__item guitar-list__item--info">
+        <h1 class="page__headline">{{ activeGuitar?.name }}</h1>
+        <mcrai-row>
+          <mcrai-col>
+            <mcrai-dl class="guitar-params guitar-params--first">
+              <ng-container *ngFor="let param of activeGuitar?.params | slice:0:activeGuitar?.params.length / 2">
+                <mcrai-dt>{{ param.name }}</mcrai-dt>
+                <mcrai-dd>{{ param.value }}</mcrai-dd>
+              </ng-container>
+            </mcrai-dl>
+          </mcrai-col>
+          <mcrai-col horizontal-left>
+            <mcrai-dl class="guitar-params guitar-params--second">
+              <ng-container *ngFor="let param of activeGuitar?.params | slice:activeGuitar?.params.length / 2">
+                <mcrai-dt>{{ param.name }}</mcrai-dt>
+                <mcrai-dd>{{ param.value }}</mcrai-dd>
+              </ng-container>
+            </mcrai-dl>
+          </mcrai-col>
+        </mcrai-row>
+      </li>
+      <li class="guitar-list__item" *ngFor="let image of activeGuitar?.images | slice:1">
+        <mcrai-media
+          type="image"
+          [data]="image"
+          [width]="height / image.height * image.width"
+          [height]="height"
+        ></mcrai-media>
+      </li>
+    </ul>
+  </div>
 
 </div>

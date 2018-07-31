@@ -44,6 +44,22 @@ export const GUITAR_GROUPS: GuitarGroup[] = [
             path: 'http://placehold.it/411x719', // 'assets/images/GRAND_CONCERT_COCOBOLO_ITALIAN_SMRK.png',
             width: 411,
             height: 719 // 1438
+          }, {
+            path: 'assets/images/GRAND_CONCERT_COCOBOLO_ITALIAN_SMRK_1.jpg',
+            width: 450,
+            height: 690
+          }, {
+            path: 'assets/images/GRAND_CONCERT_COCOBOLO_ITALIAN_SMRK_2.jpg',
+            width: 450,
+            height: 690
+          }, {
+            path: 'assets/images/GRAND_CONCERT_COCOBOLO_ITALIAN_SMRK_3.jpg',
+            width: 450,
+            height: 690
+          }, {
+            path: 'assets/images/GRAND_CONCERT_COCOBOLO_ITALIAN_SMRK_4.jpg',
+            width: 450,
+            height: 690
           }
         ]
       }, {
@@ -85,6 +101,22 @@ export const GUITAR_GROUPS: GuitarGroup[] = [
             path: 'http://placehold.it/411x719', // 'assets/images/GRAND_CONCERT_MAHAGON_CEDR.png',
             width: 411,
             height: 719
+          }, {
+            path: 'assets/images/GRAND_CONCERT_MAHAGON_CEDR_1.jpg',
+            width: 450,
+            height: 690
+          }, {
+            path: 'assets/images/GRAND_CONCERT_MAHAGON_CEDR_2.jpg',
+            width: 450,
+            height: 690
+          }, {
+            path: 'assets/images/GRAND_CONCERT_MAHAGON_CEDR_3.jpg',
+            width: 450,
+            height: 690
+          }, {
+            path: 'assets/images/GRAND_CONCERT_MAHAGON_CEDR_4.jpg',
+            width: 450,
+            height: 690
           }
         ]
       }, {
@@ -120,6 +152,18 @@ export const GUITAR_GROUPS: GuitarGroup[] = [
             path: 'http://placehold.it/411x719', // 'assets/images/GRAND_CONCERT_OVANGKOL_ENGELMANN_SMRK.png',
             width: 411,
             height: 719
+          }, {
+            path: 'assets/images/GRAND_CONCERT_OVANGKOL_ENGELMANN_SMRK_1.jpg',
+            width: 450,
+            height: 690
+          }, {
+            path: 'assets/images/GRAND_CONCERT_OVANGKOL_ENGELMANN_SMRK_2.jpg',
+            width: 450,
+            height: 690
+          }, {
+            path: 'assets/images/GRAND_CONCERT_OVANGKOL_ENGELMANN_SMRK_3.jpg',
+            width: 450,
+            height: 690
           }
         ]
       }, {
@@ -158,6 +202,22 @@ export const GUITAR_GROUPS: GuitarGroup[] = [
             path: 'http://placehold.it/411x719', // 'assets/images/JUMBO1.png',
             width: 411,
             height: 719
+          }, {
+            path: 'assets/images/JUMBO1_1.jpg',
+            width: 450,
+            height: 690
+          }, {
+            path: 'assets/images/JUMBO1_2.jpg',
+            width: 570,
+            height: 690
+          }, {
+            path: 'assets/images/JUMBO1_3.jpg',
+            width: 450,
+            height: 690
+          }, {
+            path: 'assets/images/JUMBO1_4.jpg',
+            width: 450,
+            height: 690
           }
         ]
       }, {
@@ -193,6 +253,14 @@ export const GUITAR_GROUPS: GuitarGroup[] = [
             path: 'http://placehold.it/411x719', // 'assets/images/JUMBO2.png',
             width: 411,
             height: 719
+          }, {
+            path: 'assets/images/JUMBO2_1.jpg',
+            width: 450,
+            height: 690
+          }, {
+            path: 'assets/images/JUMBO2_2.jpg',
+            width: 450,
+            height: 690
           }
         ]
       }, {
@@ -234,6 +302,18 @@ export const GUITAR_GROUPS: GuitarGroup[] = [
             path: 'http://placehold.it/411x719', // 'assets/images/JUMBO3.png',
             width: 411,
             height: 719
+          }, {
+            path: 'assets/images/JUMBO3_1.jpg',
+            width: 450,
+            height: 690
+          }, {
+            path: 'assets/images/JUMBO3_2.jpg',
+            width: 570,
+            height: 690
+          }, {
+            path: 'assets/images/JUMBO3_3.jpg',
+            width: 450,
+            height: 690
           }
         ]
       }
@@ -277,6 +357,14 @@ export const GUITAR_GROUPS: GuitarGroup[] = [
             path: 'http://placehold.it/411x719', // 'assets/images/ELECTRIC1.png',
             width: 411,
             height: 719
+          }, {
+            path: 'assets/images/ELECTRIC1_1.jpg',
+            width: 450,
+            height: 690
+          }, {
+            path: 'assets/images/ELECTRIC1_2.jpg',
+            width: 570,
+            height: 690
           }
         ]
       }, {
@@ -318,6 +406,14 @@ export const GUITAR_GROUPS: GuitarGroup[] = [
             path: 'http://placehold.it/411x719', // 'assets/images/ELECTRIC2.png',
             width: 411,
             height: 719
+          }, {
+            path: 'assets/images/ELECTRIC2_1.jpg',
+            width: 450,
+            height: 690
+          }, {
+            path: 'assets/images/ELECTRIC2_2.jpg',
+            width: 570,
+            height: 690
           }
         ]
       }

@@ -1,10 +1,19 @@
-.page__headline {
-  margin: 7rem 0 4rem 0;
-  font-size: 3.2rem;
-  letter-spacing: 1rem;
+.page--guitar {
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 0;
 }
 
-.back-button { }
+.page__headline {
+  margin: 0 0 4rem 0;
+  font-size: 5rem;
+  letter-spacing: 0.7rem;
+  line-height: 1.5;
+}
+
+.back-button {
+  margin-left: 2%;
+}
 
 .back-button__icon {
   font-size: 1.4rem;
@@ -14,3 +23,36 @@
 .mcrai-row {
   width: 100%;
 }
+
+.guitar-list-wrapper {
+  overflow-x: scroll;
+  width: 100%;
+  margin-bottom: -2rem;
+}
+
+.guitar-list {
+  display: flex;
+  list-style: none;
+  margin: 2rem 0 2.5rem 0;
+}
+
+.guitar-list__item--info {
+  width: 100rem;
+  padding: 0 0 0 10rem;
+}
+
+.guitar-list__item {
+  flex: 0 0 auto;
+  margin-right: 2rem;
+}
+
+
+.guitar-params {
+  display: block;
+}
+
+.guitar-params--first {
+  margin-left: 10rem;
+}
+
+.guitar-params--second { }

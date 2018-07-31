@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 
 import { Guitar } from '../../../_guitars/models/guitar';
 
@@ -8,8 +8,13 @@ import { Guitar } from '../../../_guitars/models/guitar';
   styleUrls: ['./root.component.scss']
 })
 export class RootComponent implements OnInit {
+  @ViewChild('page') page;
 
   @Input() activeGuitar: Guitar;
+
+  get height() {
+    return this.page ? Math.round(this.page.nativeElement.offsetHeight - 220) : 0;
+  }
 
   constructor() { }
 
