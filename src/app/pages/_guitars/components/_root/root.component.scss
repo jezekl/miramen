@@ -1,3 +1,5 @@
+@import "../../../../../scss/variables";
+
 .page--guitars {
   align-items: center;
   justify-content: flex-end;
@@ -41,6 +43,10 @@
   right: 2rem;
 }
 
+.guital-list__control-icon {
+  font-size: 2.4rem !important;
+  color: map-get($theme, color-primary);
+}
 
 /*
 

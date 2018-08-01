@@ -41,7 +41,7 @@ export const GUITAR_GROUPS: GuitarGroup[] = [
         ],
         images: [
           {
-            path: 'http://placehold.it/411x719', // 'assets/images/GRAND_CONCERT_COCOBOLO_ITALIAN_SMRK.png',
+            path: 'assets/images/GRAND_CONCERT_COCOBOLO_ITALIAN_SMRK.png',
             width: 411,
             height: 719 // 1438
           }, {
@@ -98,7 +98,7 @@ export const GUITAR_GROUPS: GuitarGroup[] = [
         ],
         images: [
           {
-            path: 'http://placehold.it/411x719', // 'assets/images/GRAND_CONCERT_MAHAGON_CEDR.png',
+            path: 'assets/images/GRAND_CONCERT_MAHAGON_CEDR.png',
             width: 411,
             height: 719
           }, {
@@ -149,7 +149,7 @@ export const GUITAR_GROUPS: GuitarGroup[] = [
         ],
         images: [
           {
-            path: 'http://placehold.it/411x719', // 'assets/images/GRAND_CONCERT_OVANGKOL_ENGELMANN_SMRK.png',
+            path: 'assets/images/GRAND_CONCERT_OVANGKOL_ENGELMANN_SMRK.png',
             width: 411,
             height: 719
           }, {
@@ -199,7 +199,7 @@ export const GUITAR_GROUPS: GuitarGroup[] = [
         ],
         images: [
           {
-            path: 'http://placehold.it/411x719', // 'assets/images/JUMBO1.png',
+            path: 'assets/images/JUMBO1.png',
             width: 411,
             height: 719
           }, {
@@ -250,7 +250,7 @@ export const GUITAR_GROUPS: GuitarGroup[] = [
         ],
         images: [
           {
-            path: 'http://placehold.it/411x719', // 'assets/images/JUMBO2.png',
+            path: 'assets/images/JUMBO2.png',
             width: 411,
             height: 719
           }, {
@@ -299,7 +299,7 @@ export const GUITAR_GROUPS: GuitarGroup[] = [
         ],
         images: [
           {
-            path: 'http://placehold.it/411x719', // 'assets/images/JUMBO3.png',
+            path: 'assets/images/JUMBO3.png',
             width: 411,
             height: 719
           }, {
@@ -354,7 +354,7 @@ export const GUITAR_GROUPS: GuitarGroup[] = [
         ],
         images: [
           {
-            path: 'http://placehold.it/411x719', // 'assets/images/ELECTRIC1.png',
+            path: 'assets/images/ELECTRIC1.png',
             width: 411,
             height: 719
           }, {
@@ -403,7 +403,7 @@ export const GUITAR_GROUPS: GuitarGroup[] = [
         ],
         images: [
           {
-            path: 'http://placehold.it/411x719', // 'assets/images/ELECTRIC2.png',
+            path: 'assets/images/ELECTRIC2.png',
             width: 411,
             height: 719
           }, {

@@ -9,7 +9,7 @@
   </miramen-slide>
   <miramen-slide>
     <miramen-horizontal-slider [activeIndex]="horizontalActiveIndex">
-      <miramen-slide class="motto">
+      <miramen-slide>
         <miramen-guitars
           [guitarGroups]="guitarGroups"
           [activeGuitarGroup]="activeGuitarGroup"
@@ -17,7 +17,7 @@
           (guitarChange)="activeGuitar = $event"
         ></miramen-guitars>
       </miramen-slide>
-      <miramen-slide>
+      <miramen-slide class="motto">
         <miramen-guitar [activeGuitar]="activeGuitar"></miramen-guitar>
       </miramen-slide>
     </miramen-horizontal-slider>
