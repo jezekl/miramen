@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
 
 import { Guitar } from '../../../_guitars/models/guitar';
 
@@ -7,8 +7,9 @@ import { Guitar } from '../../../_guitars/models/guitar';
   templateUrl: './root.component.html',
   styleUrls: ['./root.component.scss']
 })
-export class RootComponent implements OnInit {
-  @ViewChild('page') page;
+export class RootComponent implements OnInit, OnChanges {
+  @ViewChild('page') page: ElementRef;
+  @ViewChild('wrapper') wrapper: ElementRef;
 
   @Input() activeGuitar: Guitar;
 
@@ -19,5 +20,15 @@ export class RootComponent implements OnInit {
   constructor() { }
 
   ngOnInit() { }
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes.hasOwnProperty('activeGuitar') && this.wrapper) {
+      this.wrapper.nativeElement.scrollLeft = 0;
+    }
+  }
+
+  public onPan(event): void {
+    this.wrapper.nativeElement.scrollLeft -= (event.velocityX * 15);
+  }
 
 }

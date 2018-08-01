@@ -4,8 +4,8 @@
     zpět
   </a>
 
-  <div class="guitar-list-wrapper">
-    <ul class="guitar-list">
+  <div class="guitar-list-wrapper" #wrapper>
+    <ul class="guitar-list" (pan)="onPan($event)">
       <li class="guitar-list__item guitar-list__item--info">
         <h1 class="page__headline">{{ activeGuitar?.name }}</h1>
         <mcrai-row>
@@ -29,6 +29,7 @@
       </li>
       <li class="guitar-list__item" *ngFor="let image of activeGuitar?.images | slice:1">
         <mcrai-media
+          class="guitar-list__image"
           type="image"
           [data]="image"
           [width]="height / image.height * image.width"
