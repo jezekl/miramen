@@ -17,6 +17,24 @@ export class RootComponent implements OnInit, OnChanges {
     return this.page ? Math.round(this.page.nativeElement.offsetHeight - 220) : 0;
   }
 
+  get infoStyles() {
+    const DEFAULT_WIDTH = 1000;
+
+    if (this.page) {
+      const width = this.page.nativeElement.offsetWidth - this.activeGuitar.images[1].width - 40;
+
+      return {
+        width: width + 'px',
+        paddingRight: width - DEFAULT_WIDTH + 'px'
+      };
+    } else {
+      return {
+        width: DEFAULT_WIDTH + 'px',
+        paddingRight: 0
+      };
+    }
+  }
+
   constructor() { }
 
   ngOnInit() { }

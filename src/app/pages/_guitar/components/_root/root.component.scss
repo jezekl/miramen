@@ -38,8 +38,8 @@
 }
 
 .guitar-list__item--info {
-  width: 100rem;
   padding: 0 0 0 10rem;
+  position: relative;
 }
 
 .guitar-list__item {
@@ -61,3 +61,23 @@
 }
 
 .guitar-params--second { }
+
+.guitar__button {
+  position: absolute;
+  right: -9.5rem;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transform: rotate(-90deg);
+  height: 7.5rem;
+  padding: 0 5.5rem;
+  letter-spacing: 0.5rem;
+  pointer-events: none;
+}
+
+.line-bottom:before {
+  height: 10rem;
+  bottom: -9rem;
+  border-width: 0.2rem;
+}
