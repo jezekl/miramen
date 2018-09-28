@@ -18,7 +18,15 @@
 }
 
 .nav-list__item {
-  margin: 0 2rem;
+  margin: 0;
+
+  @media (min-width: $breakpoint-xs) {
+    margin: 0 1rem;
+  }
+
+  @media (min-width: $breakpoint-s) {
+    margin: 0 2rem;
+  }
 }
 
 .nav-list__button {

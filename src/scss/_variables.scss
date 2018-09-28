@@ -1,4 +1,14 @@
-$header-height: 11rem;
+$header-height-mobile:  7rem;
+$header-height-desktop: 11rem;
+
+$breakpoint-xxs: 480px;
+$breakpoint-xs:  640px;
+$breakpoint-s:   768px;
+$breakpoint-m:   840px;
+$breakpoint-l:   960px;
+$breakpoint-xl:  1280px;
+$breakpoint-xxl: 1366px;
+$breakpoint-3xl: 1600px;
 
 $theme: (
   font-primary:   ('Domine', sans-serif),

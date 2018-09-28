@@ -8,7 +8,11 @@
   top: 0;
   left: 0;
   right: 0;
-  height: $header-height;
+  height: $header-height-mobile;
   border-bottom: .1rem solid map-get($theme, line-secondary);
   z-index: 2;
+
+  @media (min-width: $breakpoint-s) {
+    height: $header-height-desktop;
+  }
 }
